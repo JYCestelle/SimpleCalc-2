@@ -48,8 +48,11 @@ class ViewController: UIViewController {
             self.inputNums.append(firstNum)
         }
         if op == "fact" {
-            let fact = getFactorial(Int(Double(input)!))
-            displayLabel.text = String(fact)
+            var result = 1
+            for i in 1..<Int(Double(input)! + 1) {
+                result = result * i
+            }
+            displayLabel.text = String(result)
         }
         input = ""
     }
@@ -79,15 +82,6 @@ class ViewController: UIViewController {
         default:
             return 0
         }
-    }
-    
-    // returns factorial of a given number
-    private func getFactorial (_ num: Int) -> Int{
-        var res = 1
-        for i in 1..<num + 1 {
-            res *= i
-        }
-        return res
     }
     
     override func viewDidLoad() {
