@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     @IBAction func Result(_ sender: UIButton) {
         let result = calculate()
         displayLabel.text = String(result)
+        input = ""
     }
     
     @IBAction func Clear(_ sender: UIButton) {
@@ -67,7 +68,7 @@ class ViewController: UIViewController {
             return firstNum / Double(input)!
         case "%":
             return Double(Int(firstNum) % Int(Double(input)!))
-        case "*":
+        case "X":
             return firstNum * Double(input)!
         case "count":
             self.inputNums.append(Double(input)!)
