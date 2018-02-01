@@ -27,8 +27,10 @@ class HistoryViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! ViewController
-        destination.history = history
+        if segue.identifier == "showMain" {
+            let mainViewController = segue.destination as! ViewController
+            mainViewController.history = self.history
+        }
     }
     
     private func renderHistory() {

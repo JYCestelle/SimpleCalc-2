@@ -84,7 +84,7 @@ class ViewController: UIViewController {
             return firstNum / Double(input)!
         case "%":
             return Double(Int(firstNum) % Int(Double(input)!))
-        case "X":
+        case "x":
             return firstNum * Double(input)!
         case "count":
             self.inputNums.append(Double(input)!)
@@ -102,8 +102,10 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! HistoryViewController
-        destination.history = history
+        if segue.identifier == "showHistory" {
+            let historyViewController = segue.destination as! HistoryViewController
+            historyViewController.history = self.history
+        }
     }
     
     override func viewDidLoad() {
