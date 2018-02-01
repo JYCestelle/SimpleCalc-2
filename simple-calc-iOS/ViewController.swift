@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     var firstNum: Double = 0.0
     var inputNums: [Double] = []
     var op: String = ""
+    var history: [[String]] = []
+    var record: [String] = []
     
     @IBOutlet weak var displayLabel: UILabel!
     
@@ -29,7 +31,15 @@ class ViewController: UIViewController {
     @IBAction func Result(_ sender: UIButton) {
         let result = calculate()
         displayLabel.text = String(result)
+        record.append(input)
+        record.append("=")
+        record.append(String(result))
+        
+        history.append(record)
+        
+        record = []
         input = ""
+        
     }
     
     @IBAction func Clear(_ sender: UIButton) {
@@ -45,6 +55,9 @@ class ViewController: UIViewController {
         op = (sender.titleLabel?.text!)!
         firstNum = Double(input)!
         displayLabel.text = String(firstNum) + op
+        
+        record.append(input)
+        record.append(op)
         if op == "count" || op == "avg" {
             self.inputNums.append(firstNum)
         }
@@ -54,6 +67,9 @@ class ViewController: UIViewController {
                 result = result * i
             }
             displayLabel.text = String(result)
+            record.append(String(result))
+            history.append(record)
+            record = []
         }
         input = ""
     }
@@ -83,6 +99,11 @@ class ViewController: UIViewController {
         default:
             return 0
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! HistoryViewController
+        destination.history = history
     }
     
     override func viewDidLoad() {

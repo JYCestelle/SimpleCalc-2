@@ -14,6 +14,7 @@
 		C29EF9492020F9F100D65FF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29EF9472020F9F100D65FF0 /* LaunchScreen.storyboard */; };
 		C29EF9542020F9F100D65FF0 /* simple_calc_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29EF9532020F9F100D65FF0 /* simple_calc_iOSTests.swift */; };
 		C29EF95F2020F9F100D65FF0 /* simple_calc_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29EF95E2020F9F100D65FF0 /* simple_calc_iOSUITests.swift */; };
+		C2CAB4892022A16C0031E92E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CAB4882022A16C0031E92E /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C29EF95A2020F9F100D65FF0 /* simple-calc-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "simple-calc-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29EF95E2020F9F100D65FF0 /* simple_calc_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simple_calc_iOSUITests.swift; sourceTree = "<group>"; };
 		C29EF9602020F9F100D65FF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2CAB4882022A16C0031E92E /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				C29EF93E2020F9F100D65FF0 /* AppDelegate.swift */,
 				C29EF9402020F9F100D65FF0 /* ViewController.swift */,
 				C29EF9422020F9F100D65FF0 /* Main.storyboard */,
+				C2CAB4882022A16C0031E92E /* HistoryViewController.swift */,
 				C29EF9452020F9F100D65FF0 /* Assets.xcassets */,
 				C29EF9472020F9F100D65FF0 /* LaunchScreen.storyboard */,
 				C29EF94A2020F9F100D65FF0 /* Info.plist */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CAB4892022A16C0031E92E /* HistoryViewController.swift in Sources */,
 				C29EF9412020F9F100D65FF0 /* ViewController.swift in Sources */,
 				C29EF93F2020F9F100D65FF0 /* AppDelegate.swift in Sources */,
 			);
